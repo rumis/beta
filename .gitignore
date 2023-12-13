@@ -19,3 +19,8 @@
 
 # Go workspace file
 go.work
+bin
+.vscode
+__debug_*
+go.sum
+config_local
