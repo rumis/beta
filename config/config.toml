@@ -1,2 +1,3 @@
 [openai]
 sk = "your sk"
+chatHost = "https://api.openai.com"

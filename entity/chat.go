@@ -41,7 +41,7 @@ type ChatCompletionRequest struct {
 
 	// Optional
 	// An object specifying the format that the model must output.
-	ResponseFormat ChatCompletionResponseFormat `json:"response_format,omitempty"`
+	ResponseFormat *ChatCompletionResponseFormat `json:"response_format,omitempty"`
 
 	// Optional
 	// This feature is in Beta. If specified, our system will make a best effort to sample deterministically,

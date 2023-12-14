@@ -1,29 +1,19 @@
 package main
 
 import (
-	"flag"
 	"net/http"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 	"github.com/spf13/viper"
-)
 
-var configFile *string
+	chatBoot "github.com/rumis/beta/boot/chat"
+)
 
 func main() {
 
-	// parse args
-	configFile = flag.String("config", "config.toml", "config file path")
-	flag.Parse()
-
-	// load config
-	// viper.SetConfigType("toml")
-	viper.SetConfigFile(*configFile)
-	err := viper.ReadInConfig()
-	if err != nil {
-		panic(err)
-	}
+	// initialize boot
+	chatBoot.BootInit()
 
 	// Echo instance
 	e := echo.New()
