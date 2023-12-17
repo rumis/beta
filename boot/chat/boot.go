@@ -12,7 +12,8 @@ var configFile *string
 // BootInit is a function to initialize boot
 func BootInit() {
 
-	ray.SetDefaultRetryTimesAndTimeout(10, 2)
+	ray.SetDefaultProxy("http://127.0.0.1:10808") // set proxy
+	ray.SetDefaultRetryTimesAndTimeout(10, 2)     // set retry times and timeout
 
 	// parse args
 	configFile = flag.String("config", "config.toml", "config file path")
