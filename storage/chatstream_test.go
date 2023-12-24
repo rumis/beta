@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"testing"
+	"time"
 
 	"github.com/rumis/beta/entity"
 	"github.com/rumis/beta/enum"
@@ -20,8 +21,9 @@ func TestCahtStreamCompletion(t *testing.T) {
 		Model: enum.GPT3Dot5Turbo,
 		Messages: []entity.ChatCompletionMessage{
 			{Role: "system", Content: "You are a helpful assistant"},
-			{Role: "user", Content: "Hello"},
+			{Role: "user", Content: "hello"},
 		},
+		Stream: true,
 	}
 
 	rsp, err := ChatStreamCompletion(context.Background(), req)
@@ -38,4 +40,12 @@ func TestCahtStreamCompletion(t *testing.T) {
 
 	fmt.Println(string(b))
 
+}
+
+func TestXxx(t *testing.T) {
+	for i := 0; i < 10000; i++ {
+		fmt.Println("hello - long texthello - long texthello - long texthello - long texthello - long texthello - long texthello - long texthello - long texthello - long texthello - long texthello - long texthello - long texthello - long texthello - long texthello - long texthello - long text:", i)
+		time.Sleep(time.Millisecond * 10)
+	}
+	fmt.Println("done")
 }
