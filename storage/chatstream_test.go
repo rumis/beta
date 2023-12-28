@@ -20,26 +20,31 @@ func TestCahtStreamCompletion(t *testing.T) {
 	req := entity.ChatCompletionRequest{
 		Model: enum.GPT3Dot5Turbo,
 		Messages: []entity.ChatCompletionMessage{
-			{Role: "system", Content: "You are a helpful assistant"},
+			// {Role: "system", Content: "You are a helpful assistant"},
 			{Role: "user", Content: "hello"},
 		},
 		Stream: true,
 	}
 
-	rsp, err := ChatStreamCompletion(context.Background(), req)
+	chatId, rsp, err := ChatStreamCompletion(context.Background(), req)
 
 	if err != nil {
 		panic(err)
 	}
 
-	b, err := json.MarshalIndent(rsp, "", "    ")
+	fmt.Println("chat:", chatId)
 
-	if err != nil {
-		panic(err)
+	for {
+		rspChunk, ok := <-rsp
+		if !ok {
+			break
+		}
+		b, err := json.MarshalIndent(rspChunk, "", "    ")
+		if err != nil {
+			panic(err)
+		}
+		fmt.Println(string(b))
 	}
-
-	fmt.Println(string(b))
-
 }
 
 func TestXxx(t *testing.T) {

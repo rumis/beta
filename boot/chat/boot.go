@@ -2,6 +2,7 @@ package chat
 
 import (
 	"flag"
+	"runtime"
 
 	"github.com/rumis/ray"
 	"github.com/spf13/viper"
@@ -11,6 +12,8 @@ var configFile *string
 
 // BootInit is a function to initialize boot
 func BootInit() {
+
+	runtime.GOMAXPROCS(8) // set max cpu
 
 	ray.SetDefaultProxy("http://127.0.0.1:10808") // set proxy
 	ray.SetDefaultRetryTimesAndTimeout(10, 2)     // set retry times and timeout

@@ -1,8 +1,12 @@
 package chat
 
-import "context"
+import (
+	"context"
 
-// Chat interface for ai chat
-type Chat interface {
-	Start(ctx context.Context) error
+	"github.com/rumis/beta/entity"
+)
+
+// ChatService interface for ai chat
+type ChatService interface {
+	Start(ctx context.Context, promp string) (entity.ChatResponse, error)
 }
