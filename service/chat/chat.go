@@ -8,5 +8,5 @@ import (
 
 // ChatService interface for ai chat
 type ChatService interface {
-	Start(ctx context.Context, promp string) (entity.ChatResponse, error)
+	Start(ctx context.Context, promp string, chatId string) (entity.ChatResponse, error)
 }

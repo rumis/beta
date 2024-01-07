@@ -2,6 +2,7 @@ package socket
 
 import (
 	"encoding/json"
+	"fmt"
 	"sync"
 
 	"github.com/rumis/beta/entity"
@@ -52,6 +53,8 @@ func (c *Scenes) ChatChunkEmit(chunk entity.ChatResponseChunk) error {
 
 	c.su.Lock()
 	defer c.su.Unlock()
+
+	fmt.Println("chunk:", string(buf))
 
 	for _, conn := range c.Conns {
 		err = conn.WriteMessage(buf)

@@ -40,7 +40,7 @@ func main() {
 		if err != nil {
 			return err
 		}
-		resp, err := chatService.NewChatCompletionStreamService().Start(context.Background(), req.Prompt)
+		resp, err := chatService.NewChatCompletionStreamService().Start(context.Background(), req.Prompt, req.ChatID)
 		if err != nil {
 			return err
 		}

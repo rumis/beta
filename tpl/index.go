@@ -1,6 +1,6 @@
 package tpl
 
-var TemplateChat = `
+var TemplateIndex = `
 <!DOCTYPE html>
 <html lang="en">
 <head>

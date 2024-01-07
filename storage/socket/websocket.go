@@ -43,6 +43,10 @@ func Upgrade(w http.ResponseWriter, r *http.Request) {
 		// 链接断开
 		if websocket.IsUnexpectedCloseError(err) {
 			logger.Debug(context.Background(), "ws.close", "%+v", connMeta)
+			// 注销链接
+			NewScenes().UnRegister(&entity.ClientConnection{
+				ClientId: connMeta.ID,
+			})
 			return
 		}
 		if err != nil && !websocket.IsUnexpectedCloseError(err) {

@@ -2,7 +2,6 @@ package chat
 
 import (
 	"context"
-	"fmt"
 	"sync"
 	"time"
 
@@ -28,7 +27,7 @@ func NewChatCompletionStreamService() ChatService {
 }
 
 // Start is a function to start chat with prompt
-func (s *ChatCompletionStreamService) Start(ctx context.Context, prompt string) (entity.ChatResponse, error) {
+func (s *ChatCompletionStreamService) Start(ctx context.Context, prompt string, chatId string) (entity.ChatResponse, error) {
 
 	req := entity.ChatCompletionRequest{
 		Model: enum.GPT3Dot5Turbo,
@@ -39,7 +38,7 @@ func (s *ChatCompletionStreamService) Start(ctx context.Context, prompt string) 
 		Stream: true,
 	}
 
-	chatId, respCh, err := storage.ChatStreamCompletion(ctx, req)
+	_, respCh, err := storage.ChatStreamCompletion(ctx, req)
 	if err != nil {
 		return entity.ChatResponse{}, err
 	}
@@ -55,12 +54,13 @@ func (s *ChatCompletionStreamService) Start(ctx context.Context, prompt string) 
 				})
 				return
 			}
-			fmt.Println(chunk) // todo: remove
+			// fmt.Println(chunk) // todo: remove
 			for _, choice := range chunk.Choices {
 				socket.NewScenes().ChatChunkEmit(entity.ChatResponseChunk{
 					ID:           chunk.ID,
 					Chunk:        choice.Delta.Content,
 					FinishReason: choice.FinishReason,
+					ChatID:       chatId,
 				})
 				if choice.FinishReason != "" {
 					return

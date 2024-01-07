@@ -2,6 +2,7 @@ package entity
 
 type ChatRequest struct {
 	Prompt string `json:"prompt"`
+	ChatID string `json:"chatId"`
 }
 
 type ChatResponse struct {
@@ -10,6 +11,7 @@ type ChatResponse struct {
 
 type ChatResponseChunk struct {
 	ID           string `json:"id"`
+	ChatID       string `json:"chat_id"`
 	Chunk        string `json:"chunk"`
 	FinishReason string `json:"finish_reason"`
 }
