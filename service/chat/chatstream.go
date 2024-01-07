@@ -9,6 +9,7 @@ import (
 	"github.com/rumis/beta/entity"
 	"github.com/rumis/beta/enum"
 	"github.com/rumis/beta/storage"
+	"github.com/rumis/beta/storage/socket"
 )
 
 // ChatCompletionStreamService is the client API for Chat service which return data with stream.
@@ -47,17 +48,23 @@ func (s *ChatCompletionStreamService) Start(ctx context.Context, prompt string) 
 		for {
 			chunk, ok := <-respCh
 			if !ok {
-				fmt.Println("svc break")
-				break
+				socket.NewScenes().ChatChunkEmit(entity.ChatResponseChunk{
+					ID:           chunk.ID,
+					Chunk:        "",
+					FinishReason: "channel closed",
+				})
+				return
 			}
-			// fmt.Println("chunk:", chunk)
+			fmt.Println(chunk) // todo: remove
 			for _, choice := range chunk.Choices {
-				if choice.FinishReason == "stop" {
-					fmt.Println("")
-					fmt.Println("stop")
+				socket.NewScenes().ChatChunkEmit(entity.ChatResponseChunk{
+					ID:           chunk.ID,
+					Chunk:        choice.Delta.Content,
+					FinishReason: choice.FinishReason,
+				})
+				if choice.FinishReason != "" {
 					return
 				}
-				fmt.Print(choice.Delta.Content)
 			}
 			time.Sleep(time.Millisecond * 10)
 		}

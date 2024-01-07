@@ -15,8 +15,8 @@ func TestChatStream(t *testing.T) {
 
 	chatSvc := NewChatCompletionStreamService()
 
-	// prompt := "hello"
-	prompt := "how to build a microservice in golang"
+	prompt := "hello"
+	// prompt := "how to build a microservice in golang"
 	chatRsp, err := chatSvc.Start(context.Background(), prompt)
 
 	if err != nil {
