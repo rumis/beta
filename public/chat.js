@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
         // clear prompt input
         document.getElementById("prompt-textarea").value = "";
 
+        // update scroll position
+        ChatRoomScrollToBottom();
+
     })
 
 });
@@ -51,6 +54,9 @@ function SocketConnect() {
             let preVal = answerNode.innerText;
             answerNode.innerText = preVal + chunk;
         }
+
+        // update scroll position
+        ChatRoomScrollToBottom();
     };
 
     ws.onclose = function () {
@@ -64,6 +70,12 @@ function SocketConnect() {
     }
     
     console.log('websocket connected');
+}
+
+function ChatRoomScrollToBottom() {
+    // update scroll position
+    let chatRoom = document.getElementById("chat_room");
+    chatRoom.scrollTop = chatRoom.scrollHeight;
 }
 
 // Show the welcome panel
@@ -158,7 +170,7 @@ function getChatTemplateRequest(chatId, prompt) {
                 <div class="flex-shrink-0 flex flex-col relative items-end">
                     <div class="pt-0.5">
                         <div class="gizmo-shadow-stroke flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
-                            <div class="relative flex"><img alt="User" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="rounded-sm" src="./mu.png" style="color: transparent;">
+                            <div class="relative flex"><img alt="User" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="rounded-sm" src="./images/mu.png" style="color: transparent;">
                             </div>
                         </div>
                     </div>

@@ -3,7 +3,7 @@
     font-family: Signifier;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/signifier-light.c131ea48.woff2) format("woff2")
+    src: url(./fonts/signifier-light.c131ea48.woff2) format("woff2")
 }
 
 @font-face {
@@ -11,7 +11,7 @@
     font-family: Signifier;
     font-style: italic;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/signifier-light-italic.ae129369.woff2) format("woff2")
+    src: url(./fonts/signifier-light-italic.ae129369.woff2) format("woff2")
 }
 
 @font-face {
@@ -19,7 +19,7 @@
     font-family: Signifier;
     font-style: normal;
     font-weight: 700;
-    src: url(https://cdn.oaistatic.com/_next/static/media/signifier-bold.3a11015f.woff2) format("woff2")
+    src: url(./fonts/signifier-bold.3a11015f.woff2) format("woff2")
 }
 
 @font-face {
@@ -27,7 +27,7 @@
     font-family: Signifier;
     font-style: italic;
     font-weight: 700;
-    src: url(https://cdn.oaistatic.com/_next/static/media/signifier-bold-italic.52d511e3.woff2) format("woff2")
+    src: url(./fonts/signifier-bold-italic.52d511e3.woff2) format("woff2")
 }
 
 @font-face {
@@ -35,7 +35,7 @@
     font-family: Söhne;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-buch.13189857.woff2) format("woff2")
+    src: url(./fonts/soehne-buch.13189857.woff2) format("woff2")
 }
 
 @font-face {
@@ -43,7 +43,7 @@
     font-family: Söhne;
     font-style: italic;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-buch-kursiv.1052965d.woff2) format("woff2")
+    src: url(./fonts/soehne-buch-kursiv.1052965d.woff2) format("woff2")
 }
 
 @font-face {
@@ -51,7 +51,7 @@
     font-family: Söhne;
     font-style: normal;
     font-weight: 500;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-kraftig.204b461c.woff2) format("woff2")
+    src: url(./fonts/soehne-kraftig.204b461c.woff2) format("woff2")
 }
 
 @font-face {
@@ -59,7 +59,7 @@
     font-family: Söhne;
     font-style: italic;
     font-weight: 500;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-kraftig-kursiv.a0040f3f.woff2) format("woff2")
+    src: url(./fonts/soehne-kraftig-kursiv.a0040f3f.woff2) format("woff2")
 }
 
 @font-face {
@@ -67,7 +67,7 @@
     font-family: Söhne;
     font-style: normal;
     font-weight: 600;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-halbfett.977f1845.woff2) format("woff2")
+    src: url(./fonts/soehne-halbfett.977f1845.woff2) format("woff2")
 }
 
 @font-face {
@@ -75,7 +75,7 @@
     font-family: Söhne;
     font-style: italic;
     font-weight: 600;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-halbfett-kursiv.cb37a814.woff2) format("woff2")
+    src: url(./fonts/soehne-halbfett-kursiv.cb37a814.woff2) format("woff2")
 }
 
 @font-face {
@@ -83,7 +83,7 @@
     font-family: Söhne Mono;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-mono-buch.de677af1.woff2) format("woff2")
+    src: url(./fonts/soehne-mono-buch.de677af1.woff2) format("woff2")
 }
 
 @font-face {
@@ -91,7 +91,7 @@
     font-family: Söhne Mono;
     font-style: normal;
     font-weight: 700;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-mono-halbfett.b082e8e2.woff2) format("woff2")
+    src: url(./fonts/soehne-mono-halbfett.b082e8e2.woff2) format("woff2")
 }
 
 @font-face {
@@ -99,7 +99,7 @@
     font-family: Söhne Mono;
     font-style: italic;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-mono-buch-kursiv.8eeb89d0.woff2) format("woff2")
+    src: url(./fonts/soehne-mono-buch-kursiv.8eeb89d0.woff2) format("woff2")
 }
 
 @font-face {
@@ -107,7 +107,7 @@
     font-family: Söhne Circle;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-circle-buch.d446e5e9.woff2) format("woff2")
+    src: url(./fonts/soehne-circle-buch.d446e5e9.woff2) format("woff2")
 }
 
 @font-face {
@@ -115,7 +115,7 @@
     font-family: Söhne Circle;
     font-style: normal;
     font-weight: 600;
-    src: url(https://cdn.oaistatic.com/_next/static/media/soehne-circle-halbfett.9eb377ad.woff2) format("woff2")
+    src: url(./fonts/soehne-circle-halbfett.9eb377ad.woff2) format("woff2")
 }
 
 /*! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com*/
@@ -9536,140 +9536,140 @@ tr[data-disabled=true] .\[tr\[data-disabled\=true\]_\&\]\:opacity-50 {
     font-family: KaTeX_AMS;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_AMS-Regular.a79f1c31.woff2) format("woff2")
+    src: url(./fonts/KaTeX_AMS-Regular.a79f1c31.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Caligraphic;
     font-style: normal;
     font-weight: 700;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Caligraphic-Bold.ec17d132.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Caligraphic-Bold.ec17d132.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Caligraphic;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Caligraphic-Regular.55fac258.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Caligraphic-Regular.55fac258.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Fraktur;
     font-style: normal;
     font-weight: 700;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Fraktur-Bold.d42a5579.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Fraktur-Bold.d42a5579.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Fraktur;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Fraktur-Regular.d3c882a6.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Fraktur-Regular.d3c882a6.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Main;
     font-style: normal;
     font-weight: 700;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Main-Bold.c3fb5ac2.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Main-Bold.c3fb5ac2.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Main;
     font-style: italic;
     font-weight: 700;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Main-BoldItalic.6f2bb1df.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Main-BoldItalic.6f2bb1df.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Main;
     font-style: italic;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Main-Italic.8916142b.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Main-Italic.8916142b.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Main;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Main-Regular.0462f03b.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Main-Regular.0462f03b.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Math;
     font-style: italic;
     font-weight: 700;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Math-BoldItalic.572d331f.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Math-BoldItalic.572d331f.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Math;
     font-style: italic;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Math-Italic.f28c23ac.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Math-Italic.f28c23ac.woff2) format("woff2")
 }
 
 @font-face {
     font-family: "KaTeX_SansSerif";
     font-style: normal;
     font-weight: 700;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_SansSerif-Bold.8c5b5494.woff2) format("woff2")
+    src: url(./fonts/KaTeX_SansSerif-Bold.8c5b5494.woff2) format("woff2")
 }
 
 @font-face {
     font-family: "KaTeX_SansSerif";
     font-style: italic;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_SansSerif-Italic.3b1e59b3.woff2) format("woff2")
+    src: url(./fonts/KaTeX_SansSerif-Italic.3b1e59b3.woff2) format("woff2")
 }
 
 @font-face {
     font-family: "KaTeX_SansSerif";
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_SansSerif-Regular.ba21ed5f.woff2) format("woff2")
+    src: url(./fonts/KaTeX_SansSerif-Regular.ba21ed5f.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Script;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Script-Regular.03e9641d.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Script-Regular.03e9641d.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Size1;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Size1-Regular.eae34984.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Size1-Regular.eae34984.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Size2;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Size2-Regular.5916a24f.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Size2-Regular.5916a24f.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Size3;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Size3-Regular.b4230e7e.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Size3-Regular.b4230e7e.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Size4;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Size4-Regular.10d95fd3.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Size4-Regular.10d95fd3.woff2) format("woff2")
 }
 
 @font-face {
     font-family: KaTeX_Typewriter;
     font-style: normal;
     font-weight: 400;
-    src: url(https://cdn.oaistatic.com/_next/static/media/KaTeX_Typewriter-Regular.a8709e36.woff2) format("woff2")
+    src: url(./fonts/KaTeX_Typewriter-Regular.a8709e36.woff2) format("woff2")
 }
 
 .katex {
