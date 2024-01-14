@@ -50,6 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
         ShowChatPanel();
 
         StartChat(prompt)
+
+        // clear prompt input
+        document.getElementById("prompt-textarea").value = "";
+        
     })
 
 });
