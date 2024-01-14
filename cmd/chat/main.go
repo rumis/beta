@@ -56,5 +56,5 @@ func main() {
 
 // Handler
 func hello(c echo.Context) error {
-	return c.String(http.StatusOK, viper.GetString("public.root"))
+	return c.String(http.StatusOK, "Hello ChatGPT")
 }
