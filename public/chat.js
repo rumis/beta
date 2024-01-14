@@ -4,7 +4,34 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('chat.js loaded');
 
     // create websocket client 
+    SocketConnect();
 
+    // clear chat room
+    document.getElementById("btn_clear").addEventListener("click", function () {
+        // ClearChatPanel();
+        HideChatPanel();
+        ShowWelcomePanel();
+    });
+
+    // send a message
+    document.getElementById("btn_send").addEventListener("click", function () {
+        let prompt = document.getElementById("prompt-textarea").value
+        if (prompt == null || prompt == '') {
+            return;
+        }
+        HideWelcomePanel();
+        ShowChatPanel();
+
+        StartChat(prompt)
+
+        // clear prompt input
+        document.getElementById("prompt-textarea").value = "";
+
+    })
+
+});
+
+function SocketConnect() {
     var ws = new WebSocket('wss://chat.liumurong.org/upgrade');
     ws.onmessage = function (msg) {
         console.log(msg);
@@ -28,35 +55,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     ws.onclose = function () {
         console.log('websocket closed');
+
+        // reconnect
+        SocketConnect()
     }
     ws.onerror = function (err) {
         console.log('websocket error', err);
     }
-
-    // clear chat room
-    document.getElementById("btn_clear").addEventListener("click", function () {
-        // ClearChatPanel();
-        HideChatPanel();
-        ShowWelcomePanel();
-    });
-
-    // send a message
-    document.getElementById("btn_send").addEventListener("click", function () {
-        let prompt = document.getElementById("prompt-textarea").value
-        if (prompt == null || prompt == '') {
-            return;
-        }
-        HideWelcomePanel();
-        ShowChatPanel();
-
-        StartChat(prompt)
-
-        // clear prompt input
-        document.getElementById("prompt-textarea").value = "";
-        
-    })
-
-});
+    
+    console.log('websocket connected');
+}
 
 // Show the welcome panel
 function ShowWelcomePanel() {
