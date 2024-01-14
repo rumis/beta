@@ -1,3 +1,9 @@
 [openai]
 sk = "your sk"
 chatHost = "https://api.openai.com"
+
+[proxy]
+addr = "proxy address"
+
+[public]
+root = "public root"

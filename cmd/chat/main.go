@@ -48,7 +48,7 @@ func main() {
 	})
 
 	// 文件服务
-	e.Static("/", "/home/workspace/beta/public")
+	e.Static("/", viper.GetString("public.root"))
 
 	// Start server
 	e.Logger.Fatal(e.Start(":7323"))
@@ -56,5 +56,5 @@ func main() {
 
 // Handler
 func hello(c echo.Context) error {
-	return c.String(http.StatusOK, viper.GetString("openai.sk"))
+	return c.String(http.StatusOK, viper.GetString("public.root"))
 }
