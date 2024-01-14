@@ -47,18 +47,6 @@ func main() {
 		return c.JSON(http.StatusOK, resp)
 	})
 
-	// e.GET("/", func(c echo.Context) error {
-	// 	// 解析指定文件生成模板对象
-	// 	tmpl := template.New("chat.liumurong.org")
-	// 	tmpl, err := tmpl.Parse(tpl.TemplateChat)
-	// 	if err != nil {
-	// 		return err
-	// 	}
-	// 	// 利用给定数据渲染模板，并将结果写入w
-	// 	err = tmpl.Execute(c.Response(), "chat.liumurong.org")
-	// 	return err
-	// })
-
 	// 文件服务
 	e.Static("/", "/home/workspace/beta/public")
 
