@@ -150,7 +150,7 @@ function getChatTemplateRequest(chatId, prompt) {
                 <div class="flex-shrink-0 flex flex-col relative items-end">
                     <div class="pt-0.5">
                         <div class="gizmo-shadow-stroke flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
-                            <div class="relative flex"><img alt="User" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="rounded-sm" src="https://lh3.googleusercontent.com/a/ACg8ocJK-LeZpfzldst8MyXXqVObufdeHjOb_tcQcflTZ_WS=s96-c" style="color: transparent;">
+                            <div class="relative flex"><img alt="User" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" class="rounded-sm" src="./mu.png" style="color: transparent;">
                             </div>
                         </div>
                     </div>
